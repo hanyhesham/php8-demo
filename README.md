@@ -7,16 +7,24 @@ This repo contains php8 application with all the components to automate it's dev
 
 ## Github Workflows
 
-- staging.yaml
+- staging.yaml: build and deploy staging version based on push to master branch.
 
+- on-demand.yaml: build and deploy on-demand dev version based on a word in the PR title 'on-demand'.
 
-
-- on-demand.yaml 
-
-
-
-- production.yaml
+- production.yaml: build and deploy production version based on release published.
 
 ## Helm Charts
 
+- Helm templates to deploy k8s manifests for dev, staging and production.
+
 ## Terraform
+
+- Terraform modules to deploy infrastructure:
+    - VPC
+    - S3
+    - Dynamodb
+    - mysql
+    - elasticahce
+    - eks
+    - sqs
+    - waf
