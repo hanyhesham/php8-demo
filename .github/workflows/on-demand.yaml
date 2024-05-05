@@ -1,0 +1,38 @@
+name: On Demand - Build and deploy php app
+
+on:
+  pull_request:
+
+jobs:
+  build-docker:
+    if: ${{ contains(github.event.pull_request.title,'on-demand') }}
+    name: Build docker image
+    runs-on: ubuntu-latest
+    steps:
+      
+      # Checkout github code
+
+      # Authenticate to AWS
+
+      # Use short commit id for docker tag
+
+      # Build the Docker image
+
+      # Push the Docker image to Google Container Registry
+
+  build-helm:
+    name: Build Helm Charts
+    runs-on: ubuntu-latest
+    steps:
+
+      # Set up helm
+
+      # Build helm release for on-demand
+
+  deploy-helm:
+    name: Deploy helm charts
+    runs-on: ubuntu-latest
+    steps:
+
+      # ENV_NAME=`echo ${{ github.event.pull_request.title }} | awk -F 'on-demand' '{print $2}' | cut -d: -f2 | awk '{print $1}'`
+      # Deploy helm package to k8s namespace

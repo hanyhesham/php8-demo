@@ -1,0 +1,34 @@
+name: Prod - Build and deploy php
+on:
+  release:
+    types: [published]
+jobs:
+  build-docker:
+    name: Build docker image
+    runs-on: ubuntu-latest
+    steps:
+      
+      # Checkout github code
+
+      # Authenticate to AWS
+
+      # Use short commit id for docker tag
+
+      # Build the Docker image
+
+      # Push the Docker image to Google Container Registry
+
+  build-helm:
+    name: Build Helm Charts
+    runs-on: ubuntu-latest
+    steps:
+
+      # Set up helm
+
+      # Build helm release for production
+
+  deploy-helm:
+    name: Deploy helm charts
+    runs-on: ubuntu-latest
+    steps:
+      # Deploy helm package to production namespace
